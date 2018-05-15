@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="craft-web:war">
+    <output-path>$PROJECT_DIR$/craft-web/target</output-path>
+    <root id="archive" name="craft.war">
+      <element id="artifact" artifact-name="craft-web:war exploded" />
+    </root>
+  </artifact>
+</component>

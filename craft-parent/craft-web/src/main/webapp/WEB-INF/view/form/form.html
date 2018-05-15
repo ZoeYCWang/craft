@@ -1,0 +1,104 @@
+<#include "/lib/page/head.html"/>
+<link rel="stylesheet" href="/mip/view/lib/c/application.css?v=${v}">
+<link rel="stylesheet" href="/mip/third-party/layer/skin/layer.css?v=${v}">
+<link rel="stylesheet" href="/mip/third-party/webupload/webuploader.css?v=${v}">
+<div class="main">
+    <div class="main-left form-left">
+        <div class="set-left-ul">
+            <ul>
+                <!---->
+                <!--<li class="selected"><table cellspacing="0" cellpadding="0" border="0"><tr><td>你好好你好好</td></tr></table></li>-->
+                <!--<li><table cellspacing="0" cellpadding="0" border="0"><tr><td>你好好你好好你好好你好好</td></tr></table></li>-->
+                <#list model as model>
+                    <#if model_index ==0>
+                    <li model-id=${model.id} model-code=${model.modelCode} class="selected">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td>${model.modelName}</td>
+                            </tr>
+                        </table>
+                    </li>
+
+                        <#else>
+                            <li model-id=${model.id} model-code=${model.modelCode}>
+                                <table cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td>${model.modelName}</td>
+                                    </tr>
+                                </table>
+                            </li>
+
+                    </#if>
+                </#list>
+            </ul>
+        </div>
+    </div>
+    <!-- 右侧 -->
+    <div class="main-right">
+        <!-- 编辑按钮 -->
+        <div class="main-r-top">
+            <div class="icon-items">
+                <a class="add-icon" href="javascript:void(0);">新增</a>
+                <a class="edit-icon" href="javascript:void(0);">编辑</a>
+                <a class="del-icon" href="javascript:void(0);">删除</a>
+                <a class="design-icon"  href="javascript:void(0);">表单设计</a>
+                <a class="look-icon"  href="javascript:void(0);">查看表单</a>
+            </div>
+            <div class="search-box">
+                <input type="hidden" class="num">
+                <input name="search" class="form-content" type="text" placeholder="综合搜索">
+                <a href="javascript:void(0);" class="search-btn"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- 表格 -->
+        <div class="atomic-grid">
+            <div class="form-grid"></div>
+        </div>
+    </div>
+
+    <!--新增和编辑表单的弹窗-->
+    <div class="form-dialog">
+        <div class="form-form"></div>
+        <div id = "fileList" class="preview-border"></div>
+        <div class="form-icon" id="img-update">
+            <span style="margin-left:27px" id="nyupfile">   </span>
+        </div>
+    </div>
+
+    <div class="form-design">
+        <div class="layout" id="layout1">
+            <div class="form-design-left">
+                <div class="toolbar" id="toptoolbar1"></div>
+                <div id="dynamic_form_detail_grid"></div>
+                <div style="height: 2px;color: #0a8ddf"></div>
+            </div>
+            <div class="form-design-right">
+                <div id="tabDesign">
+                    <div id="column-id" title="字段属性" class="design-column">
+                        <div class="toolbar" id="toptoolbar2"></div>
+                        <form id="dynamic_form_info_form"></form>
+                    </div>
+                    <div id="global-id" title="全局设置" class="design-global">
+                        <div class="toolbar" id="toptoolbar3"></div>
+                        <form id="global_form_info"></form>
+                    </div>
+                </div>
+                <div style="height: 2px;color: #0a8ddf"></div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+<#include "/lib/page/frame.html"/>
+<script type='text/javascript' src="/mip/third-party/webupload/webuploader.js?v=${v}"></script>
+<script type="text/javascript">
+    seajs.use('vm/form/j/form', function (form) {
+        form.init();
+    });
+</script>
+<#include "/lib/page/footer.html"/>

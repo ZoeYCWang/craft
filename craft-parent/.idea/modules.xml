@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/craft-common/craft-common.iml" filepath="$PROJECT_DIR$/craft-common/craft-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-parent.iml" filepath="$PROJECT_DIR$/craft-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-service/craft-service.iml" filepath="$PROJECT_DIR$/craft-service/craft-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-service/craft-service-api/craft-service-api.iml" filepath="$PROJECT_DIR$/craft-service/craft-service-api/craft-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-service/craft-service-data/craft-service-data.iml" filepath="$PROJECT_DIR$/craft-service/craft-service-data/craft-service-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-service/craft-service-impl/craft-service-impl.iml" filepath="$PROJECT_DIR$/craft-service/craft-service-impl/craft-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craft-web/craft-web.iml" filepath="$PROJECT_DIR$/craft-web/craft-web.iml" />
+    </modules>
+  </component>
+</project>
